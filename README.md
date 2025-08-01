@@ -187,3 +187,37 @@ PASS3=密码3
 ## ⚠️ 免责声明
 
 本项目仅供学习交流使用，请遵守 NodeSeek 论坛的相关规定和条款。
+
+
+#可以Cf签到了代码在相对应的js里面
+自取
+
+
+✅ Cloudflare 配置指南
+进入 Cloudflare Dashboard → Workers → 你的项目
+
+点左侧 Triggers → Add Cron Trigger
+
+示例 Cron 表达式：
+
+每天北京时间 08:00：
+
+复制
+编辑
+0 0 * * *
+每天北京时间 06:00：
+
+复制
+编辑
+0 22 * * *
+✅ 环境变量配置（env）
+你需要在 Workers 配置以下环境变量：
+
+变量名	说明
+NS_COOKIE_1	第 1 个账户的 Cookie
+USER_1	第 1 个账户的名称
+NS_COOKIE_2	第 2 个账户的 Cookie
+USER_2	第 2 个账户的名称
+...	最多支持 10 个账户
+TG_BOT_TOKEN	Telegram Bot Token
+TG_USER_ID
